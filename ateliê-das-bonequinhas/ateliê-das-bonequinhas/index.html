@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fdf0f6">
+  <meta name="description" content="Escolha e personalize sua bonequinha favorita!">
+  <title>Ateliê das Bonequinhas 🎀</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <header class="topbar">
+    <a href="#" class="brand">🎀 Ateliê das Bonequinhas</a>
+    <div class="header-actions">
+      <span class="stars" id="stars">⭐ 0</span>
+      <button class="btn" id="chal" type="button">✨ Novo desafio</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="catalog" id="personagens">
+      <div class="section-heading">
+        <div>
+          <h1>Escolha sua bonequinha! 💗</h1>
+          <p>Escolha uma personagem para começar a personalizar.</p>
+        </div>
+        <span class="counter" id="counter">32 personagens</span>
+      </div>
+
+      <label class="search-box">
+        <span>🔎</span>
+        <input id="search" type="search" placeholder="Procurar personagem..." aria-label="Procurar personagem">
+      </label>
+
+      <nav class="category-menu" aria-label="Filtrar personagens">
+        <button class="category active" data-category="Todas" type="button">💖 Todas</button>
+        <button class="category" data-category="A-E" type="button">🌸 A–E</button>
+        <button class="category" data-category="F-J" type="button">🦋 F–J</button>
+        <button class="category" data-category="K-O" type="button">🌷 K–O</button>
+        <button class="category" data-category="P-T" type="button">🎀 P–T</button>
+        <button class="category" data-category="U-Z" type="button">✨ U–Z</button>
+      </nav>
+
+      <div class="grid" id="grid" aria-label="Lista de personagens"></div>
+      <p class="empty" id="empty" hidden>Nenhuma bonequinha encontrada 💗</p>
+    </section>
+
+    <aside class="stage" id="personalizacao" aria-live="polite">
+      <div class="stage-top">
+        <span class="tag">SEU ATELIÊ ✨</span>
+        <span class="heart">♥</span>
+      </div>
+
+      <div class="doll-display" id="big"></div>
+      <h2 id="nm">Aurora</h2>
+      <p class="mission" id="mis">Escolha uma personagem para começar!</p>
+
+      <div id="customization" hidden>
+        <div class="custom-section">
+          <h3>👗 Escolha a roupa</h3>
+          <p class="selected-option" id="outfitSelected"></p>
+          <div class="options" id="outs"></div>
+        </div>
+
+        <div class="custom-section">
+          <h3>🎨 Cor da roupa</h3>
+          <div class="options colors" id="cols"></div>
+        </div>
+
+        <div class="custom-section">
+          <h3>💖 Escolha o acessório</h3>
+          <p class="selected-option" id="accessorySelected"></p>
+          <div class="options" id="accs"></div>
+        </div>
+
+        <div class="custom-section">
+          <h3>💇 Penteado</h3>
+          <div class="options" id="hairs"></div>
+        </div>
+
+        <button class="btn reset" id="reset" type="button">↻ Reiniciar visual</button>
+        <button class="btn next-character" id="next" type="button">Próxima bonequinha ➜</button>
+      </div>
+    </aside>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
